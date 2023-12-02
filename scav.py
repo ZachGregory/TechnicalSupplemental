@@ -69,10 +69,11 @@ user_answers = cursor.fetchall()
 
 print("\nUser Answers:")
 
-if user_answers[0][0] is not None:
+if user_answers[0][0] is not None:  #Print first user name heading
     print(user_answers[0][0]+":")
 person = user_answers[0][0]
-for user_answer in user_answers:
+
+for user_answer in user_answers:    #print answers for each user and name heading if user changes
     if user_answer[0] != person:
         print(user_answer[0]+":")
         person = user_answer[0]
